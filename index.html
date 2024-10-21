@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./images/image.png">
+    <title>Tic Tac Toe Game</title>
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <!-- 슬라이드 토글 버튼 추가 -->
+    <div class="toggle-container">
+        <p>AI 모드</p> <!-- AI 모드 텍스트 추가 -->
+        <label class="switch">
+            <input type="checkbox" id="mode-toggle">
+            <span class="slider"></span>
+        </label>
+        <p>2인용 모드</p>
+    </div>
+    
+    <!-- 게임 보드 컨테이너 -->
+    <div id="game-board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
