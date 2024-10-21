@@ -1,0 +1,125 @@
+/* 배경색과 기본 스타일 */
+body {
+    background-color: #f5f5dc; /* 베이지색 배경 */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #333;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-top: 20px; /* 보드와 버튼 간의 간격을 만듦 */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold; /* X와 O의 두께를 더 두껍게 */
+    cursor: pointer;
+    border: 2px solid #333;
+    border-radius: 15px; /* 셀의 모서리를 둥글게 */
+    transition: background-color 0.3s;
+}
+
+.cell.o {
+    color: #ff6347; /* O의 색상 (토마토 색상) */
+}
+
+.cell.x {
+    color: #4682b4; /* X의 색상 (강철 파랑) */
+}
+
+/* 셀의 호버 효과 */
+.cell:hover {
+    background-color: #f0f0f0;
+}
+
+/* 토글 버튼 스타일 */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* AI 모드 텍스트 스타일 */
+.toggle-container p:first-child {
+    margin-right: 15px; /* AI 모드 텍스트 오른쪽 여백 추가 */
+    margin-left: 15px; /* AI 모드 텍스트 왼쪽 여백 추가 */
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* 2인용 모드 텍스트 스타일 */
+.toggle-container p:last-child {
+    margin-left: 15px; /* 2인용 모드 텍스트 왼쪽 여백 추가 */
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.toggle-container p {
+    margin-left: 15px;
+    font-size: 1.2rem;
+    color: #333;
+}
